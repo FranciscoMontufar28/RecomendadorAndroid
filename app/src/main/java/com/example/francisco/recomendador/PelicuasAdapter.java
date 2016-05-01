@@ -27,6 +27,7 @@ public class PelicuasAdapter extends ArrayAdapter<Pelicula> {
 
 
     public PelicuasAdapter(Context context, List<Pelicula> objects) {
+
         super(context, 0, objects);
     }
 

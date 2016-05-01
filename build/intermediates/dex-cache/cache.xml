@@ -16,34 +16,6 @@
         <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-9ca63cb04e8bc69859f553785a6f22bb77b1884b.jar" />
     </item>
     <item
-        jar="C:\Users\Francisco\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\18.0\cce0823396aa693798f8882e64213b1772032b09\guava-18.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="cce0823396aa693798f8882e64213b1772032b09">
-        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\guava-18.0-a9531166b6e29361e4b2513cb16f001042c6f6f9.jar" />
-    </item>
-    <item
-        jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.github.satyan\sugar\1.4\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ac045b53684345f4ec8468477e8fc5034d0d2bfd">
-        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\classes-5540d32a18397a516246b7a8e23bb32edce34c03.jar" />
-    </item>
-    <item
-        jar="C:\Users\Francisco\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-39c9025803a7106b4aff184f57828eb1d51334e7.jar" />
-    </item>
-    <item
-        jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-9ae369de518f1e5f0d8c7b9bf6910e0ad6e80d74.jar" />
-    </item>
-    <item
         jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -65,6 +37,13 @@
         <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\classes-c5f29b51d8d047431a047fe4d73f47c285589786.jar" />
     </item>
     <item
+        jar="C:\Users\Francisco\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-39c9025803a7106b4aff184f57828eb1d51334e7.jar" />
+    </item>
+    <item
         jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.makeramen\roundedimageview\2.1.2\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -77,6 +56,20 @@
         revision="22.0.1"
         sha1="e1fa5e1123997a55e3ed65b44892993ff4b58cfe">
         <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\classes-dc800efdb6c5f46cb572601cb8ffb420c6f64707.jar" />
+    </item>
+    <item
+        jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.github.satyan\sugar\1.5\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="19a40a8afe0289f6520b25353096ac233e78f69d">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\classes-77b5570f1cc87a6683d3a4d5cf8f6a2eeeee3ee5.jar" />
+    </item>
+    <item
+        jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-9ae369de518f1e5f0d8c7b9bf6910e0ad6e80d74.jar" />
     </item>
     <item
         jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"

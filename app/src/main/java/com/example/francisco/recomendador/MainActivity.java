@@ -4,12 +4,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.nfc.Tag;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.francisco.recomendador.models.Usuario;
 
 import java.io.BufferedInputStream;
 import java.io.InputStream;
@@ -47,8 +51,11 @@ public class MainActivity extends AppCompatActivity {
             NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
 
             if (networkInfo != null && networkInfo.isConnected()) {
+            Usuario usuario = Usuario.findById(Usuario.class,1);
+                String x = usuario.getUsrid();
+                Log.e("Revision id usuario",""+x);
                 //new JsonTask().execute(new URL("http://servidorexterno.site90.com/datos/get_all_animals.php"));
-                new JsonTask().execute(new URL("http://192.168.0.13:8080/Recomendador/RestServlet?id=10"));
+                new JsonTask().execute(new URL("http://192.168.0.13:8080/Recomendador/RestServlet?id="+x));
             } else {
                 Toast.makeText(this, "Error de conexion", Toast.LENGTH_LONG).show();
             }
@@ -59,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+
+    public MainActivity() {
     }
 
     private MainActivity(Context contexto) {
@@ -123,6 +134,8 @@ public class MainActivity extends AppCompatActivity {
                         .show();
             }
         }
+
+
 
         /*@Override
         public void onItemClick(int position) {

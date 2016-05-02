@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/nombrePeliculaBuscada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imagenPeliculaBuscada"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/nombrePelicula"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/añoPeliculaBuscada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagenPelicula"
+        android:layout_centerInParent="true"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true" />
+    <TextView
+        android:id="@+id/descripcionPeliculaBuscada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tagsPelicula"
+        android:layout_centerInParent="true"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true" />
+    <TextView
+        android:id="@+id/generoPeliculaBuscada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tagsPelicula"
+        android:layout_centerInParent="true"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true" />
+
+</RelativeLayout>

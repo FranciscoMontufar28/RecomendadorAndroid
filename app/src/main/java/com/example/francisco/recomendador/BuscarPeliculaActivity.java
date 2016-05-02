@@ -1,19 +1,23 @@
 package com.example.francisco.recomendador;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.nfc.Tag;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.francisco.recomendador.models.Usuario;
+import com.example.francisco.recomendador.ParseoPeliculaBusqueda.GsonOmdbParser;
+import com.example.francisco.recomendador.ParseoPeliculaBusqueda.Omdb;
+import com.example.francisco.recomendador.ParseoPeliculaBusqueda.OmdbAdapter;
+import com.example.francisco.recomendador.R;
 
 import java.io.BufferedInputStream;
 import java.io.InputStream;
@@ -23,27 +27,43 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class BuscarPeliculaActivity extends AppCompatActivity implements View.OnClickListener {
 
-    /*
-           Variables globales
-            */
+    EditText pelicula;
+    Button btnBuscar;
+
     ListView lista;
     ArrayAdapter adaptador;
     HttpURLConnection con;
 
-    private Context mcontext;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_buscar_pelicula);
 
-        lista= (ListView) findViewById(R.id.listaPeliculas);
+        lista = (ListView) findViewById(R.id.Peliculabuscada);
 
-        /*
-        Comprobar la disponibilidad de la Red
-         */
+        pelicula = (EditText) findViewById(R.id.buscarpelicula);
+        btnBuscar = (Button) findViewById(R.id.btnbuscarpelicula);
+
+        btnBuscar.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btnbuscarpelicula:
+                buscarpelicula();
+                break;
+        }
+    }
+
+    private void buscarpelicula() {
+        String nombre = pelicula.getText().toString();
+        String nombredividido = nombre.replace(' ', '+');
+        Toast.makeText(this,"http://www.omdbapi.com/?t="+nombredividido+"&y=&plot=short&r=json",Toast.LENGTH_LONG).show();
+
         try {
             ConnectivityManager connMgr = (ConnectivityManager)
                     getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -51,11 +71,10 @@ public class MainActivity extends AppCompatActivity {
             NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
 
             if (networkInfo != null && networkInfo.isConnected()) {
-            Usuario usuario = Usuario.findById(Usuario.class,1);
-                String x = usuario.getUsrid();
-                Log.e("Revision id usuario",""+x);
-                //new JsonTask().execute(new URL("http://servidorexterno.site90.com/datos/get_all_animals.php"));
-                new JsonTask().execute(new URL("http://192.168.128.114:8080/Recomendador/RestServlet?id="+x));
+                new JsonTaskdb().execute(new URL("http://www.omdbapi.com/?t="+nombredividido+"&y=&plot=short&r=json"));
+
+                String link = ""+"http://www.omdbapi.com/?t="+nombredividido+"&y=&plot=short&r=json";
+
             } else {
                 Toast.makeText(this, "Error de conexion", Toast.LENGTH_LONG).show();
             }
@@ -64,16 +83,14 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
-
     }
 
 
-    public class JsonTask extends AsyncTask<URL, Void, List<Pelicula>> {
+   public class JsonTaskdb extends AsyncTask<URL, Void, List<Omdb>> {
 
         @Override
-        protected List<Pelicula> doInBackground(URL... urls) {
-            List<Pelicula> peliculas = null;
+        protected List<Omdb> doInBackground(URL... urls) {
+            List<Omdb> omdbs = null;
 
             try {
 
@@ -86,8 +103,8 @@ public class MainActivity extends AppCompatActivity {
                 int statusCode = con.getResponseCode();
 
                 if(statusCode!=200) {
-                    peliculas = new ArrayList<>();
-                    peliculas.add(new Pelicula("Error",null,null,null));
+                    omdbs = new ArrayList<>();
+                    omdbs.add(new Omdb("Error",null,null,null,null));
 
                 } else {
 
@@ -95,9 +112,9 @@ public class MainActivity extends AppCompatActivity {
                     InputStream in = new BufferedInputStream(con.getInputStream());
 
                     // JsonAnimalParser parser = new JsonAnimalParser();
-                    GsonPeliculasParser parser = new GsonPeliculasParser();
+                    GsonOmdbParser parser = new GsonOmdbParser();
 
-                    peliculas = parser.leerFlujoJson(in);
+                    omdbs = parser.leerFlujoJsonOmdb(in);
 
 
                 }
@@ -108,16 +125,16 @@ public class MainActivity extends AppCompatActivity {
             }finally {
                 con.disconnect();
             }
-            return peliculas;
+            return omdbs;
         }
 
         @Override
-        protected void onPostExecute(List<Pelicula> peliculas) {
-            /*
-            Asignar los objetos de Json parseados al adaptador
-             */
-            if(peliculas!=null) {
-                adaptador = new PelicuasAdapter(getBaseContext(), peliculas);
+        protected void onPostExecute(List<Omdb> Omdb) {
+
+            //Asignar los objetos de Json parseados al adaptador
+
+            if(Omdb!=null) {
+                adaptador = new OmdbAdapter(getBaseContext(), Omdb);
                 lista.setAdapter(adaptador);
             }else{
                 Toast.makeText(
@@ -130,26 +147,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        /*@Override
-        public void onItemClick(int position) {
-            Intent intent = new Intent(this, DetailActivity.class);
-            intent.putExtra(DetailActivity.KEY_ID, data.get(position).getId());
-            startActivity(intent);
-        }*/
-
-        /*@Override
-        protected void onResult(List<Pelicula> peliculas) {
-
-            if(peliculas!=null) {
-                adaptador = new PelicuasAdapter(getBaseContext(), peliculas);
-                lista.setAdapter(adaptador);
-            }else{
-                Toast.makeText(
-                        getBaseContext(),
-                        "Ocuriio un error de Parsing Json",
-                        Toast.LENGTH_SHORT)
-                        .show();
-            }
-        }*/
-    }
+}
 }

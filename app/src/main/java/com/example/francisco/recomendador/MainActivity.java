@@ -71,6 +71,8 @@ public class MainActivity extends AppCompatActivity implements RecomendacionApi.
                 break;
             case R.id.nav_usuarios:
                 //Toast.makeText(this, "main activit",Toast.LENGTH_LONG).show();
+                Intent intent1 = new Intent(this, UsuariosSimilaresActivity.class);
+                startActivity(intent1);
                 break;
             case R.id.nav_buscar:
                 //Toast.makeText(this, "main activit",Toast.LENGTH_LONG).show();

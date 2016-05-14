@@ -10,6 +10,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.francisco.recomendador.Models.Recomendacion;
@@ -20,28 +22,34 @@ import com.example.francisco.recomendador.net.api.SimilaresApi;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsuariosSimilaresActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, SimilaresApi.OnSimilares {
+public class UsuariosSimilaresActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, SimilaresApi.OnSimilares, View.OnClickListener {
     ListView list;
     List<Similares> data;
     NavigationView nav;
     SimilaresApi similaresApi;
     UsuariosSimilaresAdapter adapter;
+    EditText editText;
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuarios_similares);
 
-        String Id = getIntent().getStringExtra("id");
+        //String Id = getIntent().getStringExtra("id");
         list= (ListView) findViewById(R.id.listaUsuariosSimilares);
-        similaresApi= new SimilaresApi(this);
-        similaresApi.getSimilares(this, Id);
+
         data = new ArrayList<>();
-        adapter = new UsuariosSimilaresAdapter(this, data);
+
 
         nav = (NavigationView) findViewById(R.id.navUsuariosSimilares);
         nav.setNavigationItemSelectedListener(this);
 
-        list.setAdapter(adapter);
+        editText = (EditText) findViewById(R.id.EditUsrSimilar);
+        button = (Button) findViewById(R.id.btnUsrSimilar);
+
+        button.setOnClickListener(this);
+
+
 
 
 
@@ -74,5 +82,26 @@ public class UsuariosSimilaresActivity extends AppCompatActivity implements Navi
         }
         adapter.notifyDataSetChanged();
     }
+
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()){
+            case R.id.btnUsrSimilar:
+                buscarUsuariosSimilares();
+                break;
+        }
+
+    }
+
+    private void buscarUsuariosSimilares() {
+
+        String Id = editText.getText().toString();
+        similaresApi= new SimilaresApi(this);
+        similaresApi.getSimilares(this, Id);
+        adapter = new UsuariosSimilaresAdapter(this, data);
+        list.setAdapter(adapter);
+    }
+
 
 }

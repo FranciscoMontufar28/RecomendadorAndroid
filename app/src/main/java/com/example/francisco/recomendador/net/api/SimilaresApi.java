@@ -2,8 +2,6 @@ package com.example.francisco.recomendador.net.api;
 
 import android.content.Context;
 
-import com.example.francisco.recomendador.Models.BuscarPelicula;
-import com.example.francisco.recomendador.Models.Recomendacion;
 import com.example.francisco.recomendador.Models.Similares;
 import com.example.francisco.recomendador.R;
 import com.example.francisco.recomendador.net.HttpAsyncTask;

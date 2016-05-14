@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e1fa5e1123997a55e3ed65b44892993ff4b58cfe">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\classes-dc800efdb6c5f46cb572601cb8ffb420c6f64707.jar" />
+    </item>
+    <item
+        jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.android.support\palette-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d3aba1c188fea5ee83ebbcb458be29d1cc0ef483">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\classes-c5f29b51d8d047431a047fe4d73f47c285589786.jar" />
+    </item>
+    <item
+        jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\classes-c2b2faf206083c855e70a63fd5d3d9212aeee96a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Francisco\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-9ca63cb04e8bc69859f553785a6f22bb77b1884b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Francisco\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\gson-2.3-d840502317e1ea72b8471f9388f732e50b178dc8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Francisco\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-39c9025803a7106b4aff184f57828eb1d51334e7.jar" />
+    </item>
+    <item
+        jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\classes-e72a7555f4305e5b7aef10d1441b048e210e2dd3.jar" />
+    </item>
+    <item
+        jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\classes-0d246507a61fe5b7a17e802f95989287eae2bca0.jar" />
+    </item>
+    <item
+        jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\classes-950fc4df896a4d56643167c7249b854674f991ea.jar" />
+    </item>
+    <item
+        jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.github.satyan\sugar\1.5\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="19a40a8afe0289f6520b25353096ac233e78f69d">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\classes-77b5570f1cc87a6683d3a4d5cf8f6a2eeeee3ee5.jar" />
+    </item>
+    <item
+        jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.makeramen\roundedimageview\2.1.2\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="2b971772f0be0ab4471ee89069a70ffd6ad24740">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\classes-163884094b50f766688408c805fab0941a75a46d.jar" />
+    </item>
+    <item
+        jar="D:\android\2016\recomendador\Recomendador\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="D:\android\2016\recomendador\Recomendador\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-9ae369de518f1e5f0d8c7b9bf6910e0ad6e80d74.jar" />
+    </item>
+
+</items>

@@ -5,7 +5,7 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/nombrePeliculaBuscada"
+        android:id="@+id/pb_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -16,38 +16,21 @@
         android:textSize="24sp" />
 
     <ImageView
-        android:id="@+id/imagenPeliculaBuscada"
+        android:id="@+id/pb_imagen"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_below="@+id/nombrePelicula"
+        android:layout_below="@+id/pb_nombre"
         android:scaleType="centerCrop" />
 
     <TextView
-        android:id="@+id/añoPeliculaBuscada"
+        android:id="@+id/pb_año"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imagenPelicula"
+        android:layout_below="@+id/pb_imagen"
         android:layout_centerInParent="true"
         android:background="?android:selectableItemBackground"
         android:clickable="true"
         android:focusable="true" />
-    <TextView
-        android:id="@+id/descripcionPeliculaBuscada"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tagsPelicula"
-        android:layout_centerInParent="true"
-        android:background="?android:selectableItemBackground"
-        android:clickable="true"
-        android:focusable="true" />
-    <TextView
-        android:id="@+id/generoPeliculaBuscada"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tagsPelicula"
-        android:layout_centerInParent="true"
-        android:background="?android:selectableItemBackground"
-        android:clickable="true"
-        android:focusable="true" />
+
 
 </RelativeLayout>

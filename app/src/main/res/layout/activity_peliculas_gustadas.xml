@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.example.francisco.recomendador.PeliculasGustadasActivity">
 
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawer"
@@ -18,21 +18,21 @@
             android:layout_height="match_parent"
             >
 
-        <android.support.v4.widget.SwipeRefreshLayout
-            android:id="@+id/refresh"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
 
-        <ListView
-            android:id="@+id/listaPeliculas"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
-        </android.support.v4.widget.SwipeRefreshLayout>
+                <ListView
+                    android:id="@+id/listaPeliculasGustadas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></ListView>
+            </android.support.v4.widget.SwipeRefreshLayout>
         </FrameLayout>
-      <android.support.design.widget.NavigationView
+        <android.support.design.widget.NavigationView
             app:theme="@style/NavViewTheme"
-            android:id="@+id/nav"
+            android:id="@+id/navGustadas"
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:layout_gravity="start"

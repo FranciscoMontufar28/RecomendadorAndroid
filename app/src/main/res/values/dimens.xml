@@ -8,4 +8,5 @@
     <dimen name="template_img_height">140dp</dimen>
     <dimen name="template_icon">38dp</dimen>
     <dimen name="padding_xsmall">3dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

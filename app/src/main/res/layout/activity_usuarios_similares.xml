@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UsuariosSimilaresActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+       <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/EditUsrSimilar"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp" />
+                    <Button
+                        android:id="@+id/btnUsrSimilar"
+                        android:layout_toRightOf="@+id/EditUsrSimilar"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:text="Buscar"/>
+
+                    <ListView
+                        android:layout_below="@+id/EditUsrSimilar"
+                        android:id="@+id/listaUsuariosSimilares"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></ListView>
+
+                </RelativeLayout>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </FrameLayout>
+        <android.support.design.widget.NavigationView
+            app:theme="@style/NavViewTheme"
+            android:id="@+id/navUsuariosSimilares"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_gravity="start"
+            app:menu="@menu/menu_nav"
+            app:itemTextColor="@color/nav_item_text"
+            app:itemIconTint="@color/nav_item_icon"
+            android:background="@color/nav_bg"
+            />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

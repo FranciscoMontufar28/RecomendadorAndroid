@@ -7,22 +7,22 @@
         android:icon="@android:drawable/ic_menu_mylocation"/>
 
     <item
-        android:id="@+id/nav_lugar"
+        android:id="@+id/nav_usuarios"
         android:title="Usuarios Similares"
         android:icon="@android:drawable/ic_menu_myplaces"/>
 
     <item
-        android:id="@+id/nav_restaurantes"
+        android:id="@+id/nav_buscar"
         android:title="Buscar pelicula"
         android:icon="@android:drawable/ic_menu_crop"/>
 
     <item
-        android:id="@+id/nav_museos"
+        android:id="@+id/nav_perfil"
         android:title="Mi Perfil"
         android:icon="@android:drawable/ic_menu_gallery"/>
 
     <item
-        android:id="@+id/nav_bares"
+        android:id="@+id/nav_recomendacion"
         android:title="Nuestra recomendacion "
         android:icon="@android:drawable/ic_menu_recent_history"
         />

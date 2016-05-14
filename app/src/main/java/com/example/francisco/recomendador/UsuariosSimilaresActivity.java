@@ -1,66 +1,52 @@
 package com.example.francisco.recomendador;
 
 import android.content.Intent;
-import android.support.design.widget.NavigationView;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.francisco.recomendador.Models.Recomendacion;
-import com.example.francisco.recomendador.adapters.RecomendacionAdapters;
-import com.example.francisco.recomendador.net.api.RecomendacionApi;
+import com.example.francisco.recomendador.Models.Similares;
+import com.example.francisco.recomendador.adapters.UsuariosSimilaresAdapter;
+import com.example.francisco.recomendador.net.api.SimilaresApi;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements RecomendacionApi.OnRecomendation, NavigationView.OnNavigationItemSelectedListener {
-
-    //RecyclerView list;
+public class UsuariosSimilaresActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, SimilaresApi.OnSimilares {
     ListView list;
-    List<Recomendacion> data;
+    List<Similares> data;
     NavigationView nav;
-    RecomendacionAdapters adapter;
-    RecomendacionApi recomendacionApi;
-
-
-
+    SimilaresApi similaresApi;
+    UsuariosSimilaresAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_usuarios_similares);
 
-
-        //Usuario Id = Usuario.findById(Usuario.class, 1);
         String Id = getIntent().getStringExtra("id");
-        list= (ListView) findViewById(R.id.listaPeliculas);
-        recomendacionApi= new RecomendacionApi(this);
-        recomendacionApi.getRecomendations(this, Id);
+        list= (ListView) findViewById(R.id.listaUsuariosSimilares);
+        similaresApi= new SimilaresApi(this);
+        similaresApi.getSimilares(this, Id);
         data = new ArrayList<>();
-        adapter = new RecomendacionAdapters(this, data);
+        adapter = new UsuariosSimilaresAdapter(this, data);
 
-        nav = (NavigationView) findViewById(R.id.nav);
+        nav = (NavigationView) findViewById(R.id.navUsuariosSimilares);
         nav.setNavigationItemSelectedListener(this);
 
         list.setAdapter(adapter);
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent detalles = new Intent(getApplicationContext(), Pelicula_Activity.class);
-                detalles.putExtra("nombre", data.get(position).getNombre().toString());
-                detalles.putExtra("año", data.get(position).getTags().toString());
-                startActivity(detalles);
-
-            }
-        });
 
 
     }
-
     @Override
     public boolean onNavigationItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()){
@@ -80,15 +66,13 @@ public class MainActivity extends AppCompatActivity implements RecomendacionApi.
         }
         return false;
     }
-
     @Override
-    public void onRecomendation(List<Recomendacion> data) {
+    public void onSimilares(List<Similares> data) {
 
-        for(Recomendacion r:data){
+        for(Similares r:data){
             this.data.add(r);
         }
         adapter.notifyDataSetChanged();
     }
-
 
 }

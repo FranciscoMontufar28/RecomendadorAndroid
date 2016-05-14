@@ -1,32 +1,29 @@
-package com.example.francisco.recomendador.models;
+package com.example.francisco.recomendador.Models;
 
 import android.content.Context;
 
 import com.orm.SugarContext;
 import com.orm.SugarRecord;
 
-/**
- * Created by Francisco on 30/04/2016.
- */
 public class Usuario extends SugarRecord{
+    String nombre;
 
-    String usrid;
-
-    //region setter and getter
-    public String getUsrid() {
-        return usrid;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setUsrid(String id) {
-        this.usrid = id;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-    //endregion
 
-    public static void init(Context context, int x){
+
+    public static void init(Context context, String id){
         SugarContext.init(context);
+
         if(count(Usuario.class)<1) {
             Usuario usuario = new Usuario();
-            usuario.setUsrid(""+x);
+            usuario.setNombre(id);
+
             usuario.save();
         }
     }

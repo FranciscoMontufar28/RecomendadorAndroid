@@ -2,6 +2,7 @@ package com.example.francisco.recomendador;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,11 +10,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.francisco.recomendador.models.Usuario;
+import com.example.francisco.recomendador.Models.Usuario;
+
 
 public class Inicio_Activity extends AppCompatActivity implements View.OnClickListener {
 
     EditText idusuario;
+
     Button buscar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,24 +26,26 @@ public class Inicio_Activity extends AppCompatActivity implements View.OnClickLi
         buscar = (Button) findViewById(R.id.btnbuscar);
         
         buscar.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnbuscar:
-                accionbuscar(this);
+                accionbuscar();
                 break;
         }
     }
 
-    private void accionbuscar(Context context) {
-
+    private void accionbuscar() {
+        //Usuario usuario = new Usuario();
         String texto = idusuario.getText().toString();
-        int x = Integer.parseInt(texto);
-        Toast.makeText(this, ""+x, Toast.LENGTH_SHORT).show();
-        Usuario.init(this, x);
+        //int x = Integer.parseInt(texto);
+        //Toast.makeText(this, ""+x, Toast.LENGTH_SHORT).show();
+        //Usuario.init(this, texto);
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("id", texto);
         startActivity(intent);
 
     }

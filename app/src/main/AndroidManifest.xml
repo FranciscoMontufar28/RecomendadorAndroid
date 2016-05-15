@@ -25,7 +25,7 @@ picasso
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".Inicio_Activity" >
+        <activity android:name=".MainActivity" >
             <meta-data
                 android:name="DATABASE"
                 android:value="recomendacion.db" />
@@ -46,7 +46,7 @@ picasso
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Inicio_Activity"
             android:theme="@style/NoAppBar" >
         </activity>
         <activity android:name=".BuscarPeliculaActivity" >

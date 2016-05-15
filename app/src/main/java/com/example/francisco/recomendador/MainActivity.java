@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.francisco.recomendador.Models.Recomendacion;
@@ -16,7 +18,7 @@ import com.example.francisco.recomendador.net.api.RecomendacionApi;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements RecomendacionApi.OnRecomendation, NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements RecomendacionApi.OnRecomendation, NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     //RecyclerView list;
     ListView list;
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements RecomendacionApi.
     NavigationView nav;
     RecomendacionAdapters adapter;
     RecomendacionApi recomendacionApi;
+    EditText editText;
+    Button button;
 
 
 
@@ -34,18 +38,14 @@ public class MainActivity extends AppCompatActivity implements RecomendacionApi.
 
 
         //Usuario Id = Usuario.findById(Usuario.class, 1);
-        String Id = getIntent().getStringExtra("id");
+        //String Id = getIntent().getStringExtra("id");
         list= (ListView) findViewById(R.id.listaPeliculas);
-        recomendacionApi= new RecomendacionApi(this);
-        recomendacionApi.getRecomendations(this, Id);
         data = new ArrayList<>();
-        adapter = new RecomendacionAdapters(this, data);
-
         nav = (NavigationView) findViewById(R.id.nav);
         nav.setNavigationItemSelectedListener(this);
-
-        list.setAdapter(adapter);
-
+        editText = (EditText) findViewById(R.id.EditUsrMain);
+        button = (Button) findViewById(R.id.btnUsrMain);
+        button.setOnClickListener(this);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -79,6 +79,11 @@ public class MainActivity extends AppCompatActivity implements RecomendacionApi.
                 Intent intent2 = new Intent(this, BuscarPeliculaActivity.class);
                 startActivity(intent2);
                 break;
+            case R.id.nav_perfil:
+                Intent intent3 = new Intent(this, PeliculasGustadasActivity.class);
+                startActivity(intent3);
+                break;
+
         }
         return false;
     }
@@ -93,4 +98,22 @@ public class MainActivity extends AppCompatActivity implements RecomendacionApi.
     }
 
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.btnUsrMain:
+                generarpelicularecomendada();
+        }
+    }
+
+    private void generarpelicularecomendada() {
+
+        //data.clear();
+        String Id = editText.getText().toString();
+        recomendacionApi= new RecomendacionApi(this);
+        recomendacionApi.getRecomendations(this, Id);
+        adapter = new RecomendacionAdapters(this, data);
+        list.setAdapter(adapter);
+    }
 }

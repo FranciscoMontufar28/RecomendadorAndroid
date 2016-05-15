@@ -25,7 +25,7 @@ public class SimilaresApi implements HttpAsyncTask.OnResponseReceived {
         void onSimilares(List<Similares> data);
     }
 
-    public SimilaresApi(OnSimilares OnSimilares) {
+    public SimilaresApi(OnSimilares onSimilares) {
         this.onSimilares = onSimilares;
     }
 

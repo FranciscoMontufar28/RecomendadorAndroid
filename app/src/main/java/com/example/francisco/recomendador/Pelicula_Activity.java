@@ -61,17 +61,17 @@ public class Pelicula_Activity extends AppCompatActivity implements OmdbApi.OnOm
     @Override
     public void onOmdb(Descripcion des) {
 
-        Director.setText(""+des.getDirector());
-        Year.setText("Year: "+des.getYear());
-        Released.setText("Released: "+des.getReleased());
-        Plot.setText("Plot: "+des.getPlot());
-        Rate.setText("Rate: "+des.getRated());
-        Title.setText(""+des.getTitle());
+        Director.setText("Director: "+des.getDirector());
+        Year.setText("Año : "+des.getYear());
+        Released.setText("Lanzamiento : "+des.getReleased());
+        Plot.setText("Descripcion: "+des.getPlot());
+        Rate.setText("Clasificacion: "+des.getRated());
+        Title.setText("Titulo: "+des.getTitle());
         Actor.setText("Actores: "+des.getActors());
         Escritor.setText("Escritores: "+des.getWriter());
         Genero.setText("Generos: "+des.getGenre());
         Premios.setText("Actores: "+des.getAwards());
-        Duracion.setText("Actores: "+des.getRuntime());
+        Duracion.setText("Duracion: "+des.getRuntime());
 
         Picasso.with(this).load(Uri.parse("" + des.getPoster())).into(Img);
 

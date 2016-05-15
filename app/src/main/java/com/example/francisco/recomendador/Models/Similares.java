@@ -4,21 +4,29 @@ package com.example.francisco.recomendador.Models;
  * Created by Francisco on 13/05/2016.
  */
 public class Similares {
-    String coenficiente, id;
+    String recomendacion, usuario, imagen;
 
-    public String getId() {
-        return id;
+    public String getRecomendacion() {
+        return recomendacion;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setRecomendacion(String recomendacion) {
+        this.recomendacion = recomendacion;
     }
 
-    public String getCoenficiente() {
-        return coenficiente;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setCoenficiente(String coenficiente) {
-        this.coenficiente = coenficiente;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 }

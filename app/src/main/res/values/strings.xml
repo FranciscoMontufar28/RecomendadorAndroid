@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Recomendador</string>
-    <string name="url_recom">"http://192.168.0.13:8080/Recomendador/RestServlet?id=%s</string>
-    <string name="url_simila">"http://192.168.0.13:8080/Recomendador/SimilarUsers?id=%s</string>
-    <string name="url_liked">"http://192.168.0.13:8080/Recomendador/UserAllMovies?id=%s</string>
+    <string name="url_recom">"http://192.168.0.14:8080/Recomendador/RestServlet?id=%s</string>
+    <string name="url_simila">"http://192.168.0.14:8080/Recomendador/SimilarUser?id=%s</string>
+    <string name="url_liked">"http://192.168.0.14:8080/Recomendador/UserAllMovies?id=%s</string>
     <string name="url_omdb">http://www.omdbapi.com/?t=%1$s&amp;y=%2$s&amp;plot=short&amp;r=json</string>
     <string name="url_omdb_array">http://www.omdbapi.com/?s=%1$s&amp;y=%2$s&amp;plot=short&amp;r=json</string>
     <string name="img_menu">http://static.boydgaming.net/orleanscasino10/media/gallery/TO_Entertain-Century_Orleans_18_Movie_Theater-348733-full.jpg</string>

@@ -8,7 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.francisco.recomendador.Models.Recomendacion;
 import com.example.francisco.recomendador.Models.Similares;
 import com.example.francisco.recomendador.R;
 import com.squareup.picasso.Picasso;
@@ -53,17 +52,14 @@ public class UsuariosSimilaresAdapter extends BaseAdapter {
 
         Similares r = data.get(position);
 
-        TextView coenficiente = (TextView) v.findViewById(R.id.coeficienteusuariosimilar);
-        TextView id = (TextView) v.findViewById(R.id.idusuariosimilar);
-       // TextView tags = (TextView) v.findViewById(R.id.tagsPelicula);
-       // ImageView img = (ImageView) v.findViewById(R.id.imagenPelicula);
+        TextView recomendacion = (TextView) v.findViewById(R.id.coeficienteusuariosimilar);
+        TextView usuario = (TextView) v.findViewById(R.id.nombreusuariosimilar);
+        ImageView imagen = (ImageView) v.findViewById(R.id.imgpeliculagustada);
 
-        coenficiente.setText(r.getCoenficiente());
-        id.setText(r.getId());
-        //recomendacion.setText(r.getRecomendacion());
-        //tags.setText(r.getTags());
+        recomendacion.setText(r.getRecomendacion());
+        usuario.setText(r.getUsuario());
 
-        //Picasso.with(context).load(Uri.parse(r.getImagen())).into(img);
+        Picasso.with(context).load(Uri.parse(r.getImagen())).into(imagen);
 
         return v;
     }

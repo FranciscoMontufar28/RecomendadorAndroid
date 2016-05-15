@@ -54,11 +54,13 @@ public class PeliculasGustadasAdapter extends BaseAdapter{
         Gustadas r = data.get(position);
 
         TextView nombre = (TextView) v.findViewById(R.id.nombrepeliculagustada);
+        TextView año = (TextView) v.findViewById(R.id.añopeliculagustada);
         ImageView img = (ImageView) v.findViewById(R.id.imgpeliculagustada);
 
-        nombre.setText(r.getPelicula());
+        nombre.setText(r.getNombre());
+        año.setText(r.getYear());
 
-        Picasso.with(context).load(Uri.parse(r.getPoster())).into(img);
+        Picasso.with(context).load(Uri.parse(r.getImagen())).into(img);
 
         return v;
     }

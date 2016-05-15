@@ -58,18 +58,24 @@ public class UsuariosSimilaresActivity extends AppCompatActivity implements Navi
     @Override
     public boolean onNavigationItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()){
-            case R.id.nav_inicio:
+            case R.id.nav_inicio_similares:
                 //Toast.makeText(this, "main activit",Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.nav_usuarios:
+            case R.id.nav_usuarios_similares:
                 //Toast.makeText(this, "main activit",Toast.LENGTH_LONG).show();
+                Intent intent1 = new Intent(this, UsuariosSimilaresActivity.class);
+                startActivity(intent1);
                 break;
-            case R.id.nav_buscar:
+            case R.id.nav_buscar_similares:
                 //Toast.makeText(this, "main activit",Toast.LENGTH_LONG).show();
                 Intent intent2 = new Intent(this, BuscarPeliculaActivity.class);
                 startActivity(intent2);
+                break;
+            case R.id.nav_perfil_similares:
+                Intent intent3 = new Intent(this, PeliculasGustadasActivity.class);
+                startActivity(intent3);
                 break;
         }
         return false;

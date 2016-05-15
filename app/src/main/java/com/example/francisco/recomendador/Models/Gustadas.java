@@ -5,21 +5,29 @@ package com.example.francisco.recomendador.Models;
  */
 public class Gustadas {
 
-    String pelicula, poster;
+    String nombre, year, imagen;
 
-    public String getPelicula() {
-        return pelicula;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setPelicula(String pelicula) {
-        this.pelicula = pelicula;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getPoster() {
-        return poster;
+    public String getYear() {
+        return year;
     }
 
-    public void setPoster(String poster) {
-        this.poster = poster;
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 }

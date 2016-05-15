@@ -2,37 +2,37 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_inicio"
+        android:id="@+id/nav_inicio_peliculas"
         android:title="Recomendacion Peliculas"
         android:icon="@android:drawable/ic_menu_mylocation"/>
 
     <item
-        android:id="@+id/nav_usuarios"
+        android:id="@+id/nav_usuarios_peliculas"
         android:title="Usuarios Similares"
         android:icon="@android:drawable/ic_menu_myplaces"/>
 
     <item
-        android:id="@+id/nav_buscar"
+        android:id="@+id/nav_buscar_peliculas"
         android:title="Buscar pelicula"
         android:icon="@android:drawable/ic_menu_crop"/>
 
     <item
-        android:id="@+id/nav_perfil"
+        android:id="@+id/nav_perfil_peliculas"
         android:title="Perfil"
         android:icon="@android:drawable/ic_menu_gallery"/>
 
     <item
-        android:id="@+id/nav_recomendacion"
+        android:id="@+id/nav_recomendacion_peliculas"
         android:title="Nuestra recomendacion "
         android:icon="@android:drawable/ic_menu_recent_history"
         />
 
     <item
-        android:title="Perfil"
+        android:title="Perfil_peliculas"
         >
         <menu>
             <item
-                android:id="@+id/nav_edit"
+                android:id="@+id/nav_edit_peliculas"
                 android:title="Salir"/>
 
         </menu>

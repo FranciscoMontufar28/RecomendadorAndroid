@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    android:background="#B6B6B6"
+    android:background="@drawable/harry"
     android:orientation="vertical"
     tools:context="com.example.francisco.recomendador.PeliculasGustadasActivity">
 
@@ -19,16 +19,12 @@
             android:layout_height="match_parent"
             >
 
-            <android.support.v4.widget.SwipeRefreshLayout
-                android:id="@+id/refresh"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <EditText
+                        android:textColor="#fff"
                         android:id="@+id/EditPeliculasGustadas"
                         android:layout_width="150dp"
                         android:layout_height="50dp"
@@ -49,7 +45,6 @@
                 </RelativeLayout>
 
 
-            </android.support.v4.widget.SwipeRefreshLayout>
         </FrameLayout>
         <android.support.design.widget.NavigationView
             app:theme="@style/NavViewTheme"

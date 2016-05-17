@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
-        android:textColor="#fff"
-        android:id="@+id/nombrePelicula"
+        android:id="@+id/nombrePeliculaNuestra"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -15,27 +13,19 @@
         android:textSize="24sp" />
 
     <ImageView
-        android:id="@+id/imagenPelicula"
+        android:id="@+id/imagenPeliculaNuestra"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_below="@+id/nombrePelicula"
+        android:layout_below="@+id/nombrePeliculaNuestra"
         android:scaleType="centerCrop" />
 
     <TextView
-        android:textColor="#fff"
-        android:id="@+id/tagsPelicula"
+        android:id="@+id/tagsPeliculaNuestra"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imagenPelicula"
+        android:layout_below="@+id/imagenPeliculaNuestra"
         android:layout_centerInParent="true"
         android:background="?android:selectableItemBackground"/>
-    <TextView
-        android:textColor="#fff"
-        android:id="@+id/recomendacion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tagsPelicula"
-        android:layout_centerInParent="true"
-        android:background="?android:selectableItemBackground"/>
+
 
 </RelativeLayout>

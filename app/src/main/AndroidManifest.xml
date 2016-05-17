@@ -45,10 +45,6 @@ picasso
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Inicio_Activity"
-            android:theme="@style/NoAppBar" >
-        </activity>
         <activity android:name=".BuscarPeliculaActivity" >
         </activity>
         <activity android:name=".Pelicula_Activity" >
@@ -59,6 +55,15 @@ picasso
             android:name=".UsuariosSimilaresActivity"
             android:label="@string/title_activity_usuarios_similares"
             android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name=".NuestraRecomendacion" >
+        </activity>
+        <activity
+            android:name=".Pelicula_Calificar"
+            android:label="@string/title_activity_pelicula__calificar"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name=".Pelicula_Calificar_Activity" >
         </activity>
     </application>
 

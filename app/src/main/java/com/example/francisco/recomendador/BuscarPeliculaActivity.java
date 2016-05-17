@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -53,7 +54,7 @@ public class BuscarPeliculaActivity extends AppCompatActivity implements View.On
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent lanzar = new Intent(getApplicationContext(), Pelicula_Activity.class);
+                Intent lanzar = new Intent(getApplicationContext(), Pelicula_Calificar_Activity.class);
                 lanzar.putExtra("nombre", data.get(position).getTitle().toString());
                 lanzar.putExtra("año", data.get(position).getYear().toString());
                 startActivity(lanzar);
@@ -61,15 +62,15 @@ public class BuscarPeliculaActivity extends AppCompatActivity implements View.On
         });
         btnBuscar.setOnClickListener(this);
 
-
-
-
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnbuscarpelicula:
+                InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(this.INPUT_METHOD_SERVICE);
+                inputMethodManager.hideSoftInputFromWindow(pelicula.getWindowToken(), 0);
+                //Toast.makeText(this, "accion boton", Toast.LENGTH_SHORT).show();
                 buscarpelicula();
                 break;
         }
@@ -82,8 +83,6 @@ public class BuscarPeliculaActivity extends AppCompatActivity implements View.On
         adapter = new BuscarPeliculaAdapters(this, data);
         omdbSearchApi.getDescriptionSearch(this, nombre, "");
         list.setAdapter(adapter);
-
-
     }
 
 
@@ -116,6 +115,10 @@ public class BuscarPeliculaActivity extends AppCompatActivity implements View.On
             case R.id.nav_perfil_peliculas:
                 Intent intent3 = new Intent(this, PeliculasGustadasActivity.class);
                 startActivity(intent3);
+                break;
+            case R.id.nav_recomendacion_peliculas:
+                Intent intent4 = new Intent(this, NuestraRecomendacion.class);
+                startActivity(intent4);
                 break;
         }
         return false;

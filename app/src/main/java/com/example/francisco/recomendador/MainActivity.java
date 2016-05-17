@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -83,6 +84,10 @@ public class MainActivity extends AppCompatActivity implements RecomendacionApi.
                 Intent intent3 = new Intent(this, PeliculasGustadasActivity.class);
                 startActivity(intent3);
                 break;
+            case R.id.nav_recomendacion:
+                Intent intent4 = new Intent(this, NuestraRecomendacion.class);
+                startActivity(intent4);
+                break;
 
         }
         return false;
@@ -103,6 +108,8 @@ public class MainActivity extends AppCompatActivity implements RecomendacionApi.
         switch (v.getId())
         {
             case R.id.btnUsrMain:
+                InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(this.INPUT_METHOD_SERVICE);
+                inputMethodManager.hideSoftInputFromWindow(editText.getWindowToken(), 0);
                 generarpelicularecomendada();
         }
     }

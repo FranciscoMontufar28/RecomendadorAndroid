@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#9E9E9E</color>
-    <color name="primaryDark">#616161</color>
-    <color name="accent">#607D8B</color>
+    <color name="primary">#FF9800</color>
+    <color name="primaryDark">#F57C00</color>
+    <color name="accent">#FF5722</color>
 
-    <color name="nav_bg">#333333</color>
+    <color name="nav_bg">#F57C00</color>
     <color name="nav_item_text">#efefef</color>
     <color name="nav_item_icon">#dddddd</color>
     <color name="nav_subheader_txt">#bbbbbb</color>

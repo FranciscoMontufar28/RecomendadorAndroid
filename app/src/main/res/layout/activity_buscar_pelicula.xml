@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/xmen"
+    android:background="#000"
     tools:context="com.example.francisco.recomendador.BuscarPeliculaActivity">
 
     <android.support.v4.widget.DrawerLayout
@@ -41,7 +41,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:text="Buscar"
-        android:background="#0288D1"
+        android:background="#F57C00"
         android:layout_toRightOf="@id/buscarpelicula"
         />
     <ListView

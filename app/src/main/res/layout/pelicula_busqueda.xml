@@ -5,6 +5,7 @@
     android:padding="16dp">
 
     <TextView
+        android:textColor="#fff"
         android:id="@+id/pb_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,6 +22,7 @@
         android:scaleType="centerCrop" />
 
     <TextView
+        android:textColor="#fff"
         android:id="@+id/pb_año"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

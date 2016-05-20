@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/game"
+    android:background="#000"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.francisco.recomendador.NuestraRecomendacion">
 
@@ -34,7 +34,7 @@
                         android:layout_toRightOf="@+id/EditUsrNuestro"
                         android:layout_width="150dp"
                         android:layout_height="50dp"
-                        android:background="#0288D1"
+                        android:background="#F57C00"
                         android:text="Buscar"
                         android:textColor="#ffffff"/>
 

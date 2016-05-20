@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -44,7 +45,7 @@ public class BuscarPeliculaActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscar_pelicula);
         data = new ArrayList<>();
-
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         list = (ListView) findViewById(R.id.Peliculabuscada);
         pelicula = (EditText) findViewById(R.id.buscarpelicula);
         btnBuscar = (Button) findViewById(R.id.btnbuscarpelicula);

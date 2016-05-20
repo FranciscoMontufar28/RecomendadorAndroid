@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements RecomendacionApi.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         //Usuario Id = Usuario.findById(Usuario.class, 1);
         //String Id = getIntent().getStringExtra("id");
         list= (ListView) findViewById(R.id.listaPeliculas);

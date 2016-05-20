@@ -12,6 +12,7 @@
         android:layout_height="100dp"
         android:orientation="vertical">
     <TextView
+        android:background="#616161"
         android:layout_weight="1"
         android:id="@+id/nombrepeliculagustada"
         android:layout_width="match_parent"
@@ -19,6 +20,7 @@
         android:text="NombrePeliculaGustada"
         android:gravity="left|center"/>
         <TextView
+        android:background="#9E9E9E"
         android:layout_weight="1"
         android:id="@+id/añopeliculagustada"
         android:layout_width="match_parent"

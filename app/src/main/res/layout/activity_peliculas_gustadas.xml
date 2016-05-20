@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    android:background="@drawable/harry"
+    android:background="#000"
     android:orientation="vertical"
     tools:context="com.example.francisco.recomendador.PeliculasGustadasActivity">
 
@@ -34,6 +34,7 @@
                         android:layout_toRightOf="@+id/EditPeliculasGustadas"
                         android:layout_width="150dp"
                         android:layout_height="50dp"
+                        android:background="#F57C00"
                         android:text="Buscar"/>
 
                     <ListView
